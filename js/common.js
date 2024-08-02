@@ -1,7 +1,8 @@
 "use strict";
 
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 document.addEventListener("DOMContentLoaded", function () {
-  var _document$querySelect, _document$querySelect2, _document12, _document13, _document14;
+  var _document$querySelect, _document$querySelect2, _document12, _document13;
   //  catalog
   (_document$querySelect = document.querySelector('.js-submenu')) === null || _document$querySelect === void 0 || _document$querySelect.addEventListener('click', function (e) {
     var _this$closest;
@@ -50,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var headerLogo = (_document7 = document) === null || _document7 === void 0 || (_document7 = _document7.querySelector('.header__top')) === null || _document7 === void 0 ? void 0 : _document7.querySelector(".logo");
         headerLogo === null || headerLogo === void 0 || headerLogo.after(emailMenu);
         var orderCallMenu = ((_document8 = document) === null || _document8 === void 0 || (_document8 = _document8.querySelector('.menu-mobile')) === null || _document8 === void 0 ? void 0 : _document8.querySelector(".order-call")) || '';
+        console.log('orderCallMenu>>', _typeof(orderCallMenu));
         orderCallMenu === null || orderCallMenu === void 0 || orderCallMenu.classList.add('header__order-call');
         var headerEmail = (_document9 = document) === null || _document9 === void 0 || (_document9 = _document9.querySelector('.header__top')) === null || _document9 === void 0 ? void 0 : _document9.querySelector(".link-email");
         headerEmail === null || headerEmail === void 0 || headerEmail.after(orderCallMenu);
@@ -70,9 +72,10 @@ document.addEventListener("DOMContentLoaded", function () {
   // menu mobile
   var buttonMenu = (_document12 = document) === null || _document12 === void 0 ? void 0 : _document12.querySelector(".js-mobile-button");
   var blockMenu = (_document13 = document) === null || _document13 === void 0 ? void 0 : _document13.querySelector(".menu-mobile");
-  var buttonMenuClose = (_document14 = document) === null || _document14 === void 0 ? void 0 : _document14.querySelector('.js-menu-close');
+  // const buttonMenuClose = document?.querySelector('.js-menu-close');
+
   var openMenu = function openMenu() {
-    blockMenu.classList.add("menu-mobile--active");
+    blockMenu.classList.toggle("menu-mobile--active");
     document.querySelector('body').classList.add('body-fixed');
   };
   var closeMenu = function closeMenu() {
@@ -80,9 +83,11 @@ document.addEventListener("DOMContentLoaded", function () {
   };
   buttonMenu === null || buttonMenu === void 0 || buttonMenu.addEventListener("click", function (e) {
     e.preventDefault();
+    this.classList.toggle('mobile-link__item--active');
     openMenu();
   });
-  buttonMenuClose === null || buttonMenuClose === void 0 || buttonMenuClose.addEventListener("click", function () {
-    closeMenu();
-  });
+
+  // buttonMenuClose?.addEventListener("click", () => {
+  //   closeMenu();
+  // });
 });
