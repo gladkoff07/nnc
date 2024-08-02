@@ -1,6 +1,5 @@
 "use strict";
 
-function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 document.addEventListener("DOMContentLoaded", function () {
   var _document$querySelect, _document$querySelect2, _document12, _document13;
   //  catalog
@@ -51,8 +50,12 @@ document.addEventListener("DOMContentLoaded", function () {
         var headerLogo = (_document7 = document) === null || _document7 === void 0 || (_document7 = _document7.querySelector('.header__top')) === null || _document7 === void 0 ? void 0 : _document7.querySelector(".logo");
         headerLogo === null || headerLogo === void 0 || headerLogo.after(emailMenu);
         var orderCallMenu = ((_document8 = document) === null || _document8 === void 0 || (_document8 = _document8.querySelector('.menu-mobile')) === null || _document8 === void 0 ? void 0 : _document8.querySelector(".order-call")) || '';
-        console.log('orderCallMenu>>', _typeof(orderCallMenu));
-        orderCallMenu === null || orderCallMenu === void 0 || orderCallMenu.classList.add('header__order-call');
+        // console.log('orderCallMenu>>', typeof(orderCallMenu))
+        if (orderCallMenu === 'string') {
+          return ' ';
+        } else {
+          orderCallMenu === null || orderCallMenu === void 0 || orderCallMenu.classList.add('header__order-call');
+        }
         var headerEmail = (_document9 = document) === null || _document9 === void 0 || (_document9 = _document9.querySelector('.header__top')) === null || _document9 === void 0 ? void 0 : _document9.querySelector(".link-email");
         headerEmail === null || headerEmail === void 0 || headerEmail.after(orderCallMenu);
         var phoneMobile = (_document10 = document) === null || _document10 === void 0 || (_document10 = _document10.querySelector('.menu-mobile')) === null || _document10 === void 0 ? void 0 : _document10.querySelector(".link-phone");
