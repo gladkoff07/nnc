@@ -2,6 +2,13 @@
 
 document.addEventListener("DOMContentLoaded", function () {
   var _document$querySelect, _document$querySelect2, _document12, _document13;
+  // input mask
+  document.querySelectorAll('.js-form-phone').forEach(function (e) {
+    var phoneMask = IMask(e, {
+      mask: '+{7}(000)000-00-00'
+    });
+  });
+
   //  catalog
   (_document$querySelect = document.querySelector('.js-submenu')) === null || _document$querySelect === void 0 || _document$querySelect.addEventListener('click', function (e) {
     var _this$closest;
