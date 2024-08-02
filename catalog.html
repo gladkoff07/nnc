@@ -34,10 +34,33 @@
         <div class="header__bottom row row--align-center">
           <!-- menu-->
           <ul class="menu">
-            <li class="menu__item"><a class="menu__link menu__link--icon" href="#"><span class="menu__link-text">Каталог</span><span class="menu__link-icon">
+            <li class="menu__item"><a class="menu__link menu__link--icon js-submenu" href="#"><span class="menu__link-text">Каталог</span><span class="menu__link-icon">
                   <svg class="icon icon-catalog">
                     <use xlink:href="svg/symbols.svg#icon-catalog"></use>
-                  </svg></span></a></li>
+                  </svg></span></a>
+              <div class="menu__sub">
+                <div class="container">
+                  <div class="close-sub-menu">
+                    <svg class="icon icon-close-sub">
+                      <use xlink:href="svg/symbols.svg#icon-close-sub"></use>
+                    </svg>
+                  </div>
+                  <ul class="sub-menu">
+                    <li class="sub-menu__item"><a class="sub-menu__link" href="#">Электромеханические реле</a>
+                      <ul class="sub-menu-inner">
+                        <li class="sub-menu-inner__item"><a class="sub-menu-inner__link" href="#"> 12vdc</a></li>
+                        <li class="sub-menu-inner__item"><a class="sub-menu-inner__link" href="#">24vac</a></li>
+                        <li class="sub-menu-inner__item"><a class="sub-menu-inner__link" href="#">24vdc</a></li>
+                        <li class="sub-menu-inner__item"><a class="sub-menu-inner__link" href="#">220vac</a></li>
+                      </ul>
+                    </li>
+                    <li class="sub-menu__item"><a class="sub-menu__link" href="#">Твердотельные реле</a></li>
+                    <li class="sub-menu__item"><a class="sub-menu__link" href="#">Интерфейсные реле</a></li>
+                    <li class="sub-menu__item"><a class="sub-menu__link" href="#">Колодки</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
             <li class="menu__item"><a class="menu__link" href="#">Где купить</a></li>
             <li class="menu__item"><a class="menu__link menu__link--icon" href="#"><span class="menu__link-text">Стать дилером</span><span class="menu__link-icon">
                   <svg class="icon icon-arrow-double">
