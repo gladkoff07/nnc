@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var _document$querySelect5, _document6, _document7, _document8, _document9, _document10, _document11;
         document.querySelector('body').classList.remove('body-fixed');
         document.querySelector('.menu-mobile').classList.remove('menu-mobile--active');
-        var menuMobile = (_document$querySelect5 = document.querySelector(".menu-mobile")) === null || _document$querySelect5 === void 0 ? void 0 : _document$querySelect5.querySelector('.menu');
+        var menuMobile = ((_document$querySelect5 = document.querySelector(".menu-mobile")) === null || _document$querySelect5 === void 0 ? void 0 : _document$querySelect5.querySelector('.menu')) || ' ';
         var menuHeader = document.querySelector(".header__bottom");
         menuHeader === null || menuHeader === void 0 || menuHeader.prepend(menuMobile);
         var emailMenu = (_document6 = document) === null || _document6 === void 0 || (_document6 = _document6.querySelector('.menu-mobile')) === null || _document6 === void 0 ? void 0 : _document6.querySelector(".link-email");
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   var openMenu = function openMenu() {
     blockMenu.classList.toggle("menu-mobile--active");
-    document.querySelector('body').classList.add('body-fixed');
+    document.querySelector('body').classList.toggle('body-fixed');
   };
   var closeMenu = function closeMenu() {
     blockMenu === null || blockMenu === void 0 || blockMenu.classList.remove("menu-mobile--active");
